@@ -1,0 +1,15 @@
+print("Kalkulator opłat cięcia laserem")
+grubosc = float(input("Podaj grubość blachy w milimetrach (2 lub 3 mm): "))
+if grubosc == 2:
+    cena = 2
+elif grubosc == 3:
+    cena = 3
+else:
+    print("Niestety, nie obsługujemy blach o innej grubości.")
+    cena = 0
+if cena != 0:
+    dlugosc = float(input("Podaj długość cięcia w metrach: "))
+    szerokosc = float(input("Podaj szerokość cięcia w metrach: "))
+    mb = dlugosc * szerokosc * 1000000
+    oplata = mb * cena
+    print("Do zapłaty za cięcie", dlugosc, "m x", szerokosc, "m blachy grubości", grubosc, "mm wynosi", oplata, "zł.")
